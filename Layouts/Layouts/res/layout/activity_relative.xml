@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout: cada elemento se coloca EN RELACIÓN al padre o a otro elemento -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Pegado arriba y centrado horizontalmente (respecto al padre) -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Ejemplo de RelativeLayout"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Justo en el centro de la pantalla -->
+    <TextView
+        android:id="@+id/centro"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerInParent="true"
+        android:background="#FFB74D"
+        android:gravity="center"
+        android:text="CENTRO" />
+
+    <!-- ARRIBA del cuadro del centro (respecto a otro elemento) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/centro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:background="#81C784"
+        android:padding="8dp"
+        android:text="Arriba" />
+
+    <!-- DEBAJO del cuadro del centro -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:background="#64B5F6"
+        android:padding="8dp"
+        android:text="Abajo" />
+
+    <!-- A la IZQUIERDA del cuadro del centro -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/centro"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="8dp"
+        android:background="#E57373"
+        android:padding="8dp"
+        android:text="Izquierda" />
+
+    <!-- A la DERECHA del cuadro del centro -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/centro"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:background="#BA68C8"
+        android:padding="8dp"
+        android:text="Derecha" />
+
+    <!-- Esquina inferior derecha (respecto al padre) -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:text="Esquina" />
+
+</RelativeLayout>

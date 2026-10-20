@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FrameLayout: los elementos se ENCIMAN uno sobre otro (como capas) -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Capa 1 (hasta abajo): fondo que llena toda la pantalla -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#90CAF9" />
+
+    <!-- Capa 2: cuadro grande centrado -->
+    <View
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:background="#1E88E5" />
+
+    <!-- Capa 3: cuadro mediano encima del anterior -->
+    <View
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="#0D47A1" />
+
+    <!-- Capa 4: texto encima de todo -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Encima de todo"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Título arriba al centro -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="24dp"
+        android:text="Ejemplo de FrameLayout"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Botón flotando en la esquina inferior derecha -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:text="+" />
+
+</FrameLayout>

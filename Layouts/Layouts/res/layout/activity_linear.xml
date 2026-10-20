@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinearLayout: acomoda los elementos en UNA fila o UNA columna -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo de LinearLayout"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Vertical: un elemento debajo de otro"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tres cajas apiladas en vertical -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#E57373"
+        android:gravity="center"
+        android:text="Caja 1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#81C784"
+        android:gravity="center"
+        android:text="Caja 2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#64B5F6"
+        android:gravity="center"
+        android:text="Caja 3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Horizontal: uno al lado del otro (con layout_weight)"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- LinearLayout horizontal dentro del vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- weight 1 + weight 2 = este ocupa 1/3 del ancho -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1/3" />
+
+        <!-- este ocupa 2/3 del ancho -->
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="2/3" />
+    </LinearLayout>
+
+</LinearLayout>

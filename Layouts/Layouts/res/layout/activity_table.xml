@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TableLayout: acomoda los elementos en FILAS (TableRow) y COLUMNAS, como una tabla -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:stretchColumns="1">
+    <!-- stretchColumns="1": la columna 1 (la de los campos) se estira para llenar el ancho -->
+
+    <TextView
+        android:text="Formulario de registro"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Fila 1: columna 0 = etiqueta, columna 1 = campo -->
+    <TableRow>
+        <TextView
+            android:text="Nombre:"
+            android:padding="8dp" />
+        <EditText
+            android:hint="Escribe tu nombre"
+            android:inputType="textPersonName" />
+    </TableRow>
+
+    <!-- Fila 2 -->
+    <TableRow>
+        <TextView
+            android:text="Correo:"
+            android:padding="8dp" />
+        <EditText
+            android:hint="ejemplo@correo.com"
+            android:inputType="textEmailAddress" />
+    </TableRow>
+
+    <!-- Fila 3 -->
+    <TableRow>
+        <TextView
+            android:text="Teléfono:"
+            android:padding="8dp" />
+        <EditText
+            android:hint="10 dígitos"
+            android:inputType="phone" />
+    </TableRow>
+
+    <!-- Fila 4 -->
+    <TableRow>
+        <TextView
+            android:text="Contraseña:"
+            android:padding="8dp" />
+        <EditText
+            android:hint="Mínimo 8 caracteres"
+            android:inputType="textPassword" />
+    </TableRow>
+
+    <!-- Fila 5: el botón ocupa las 2 columnas -->
+    <TableRow>
+        <Button
+            android:layout_span="2"
+            android:layout_marginTop="16dp"
+            android:text="Registrar" />
+    </TableRow>
+
+</TableLayout>

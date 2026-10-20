@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Layouts"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Layouts">
+
+        <!-- Activity principal: la que se abre al iniciar la app -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Las 4 Activities de ejemplo (TODAS deben registrarse aquí) -->
+        <activity android:name=".LinearActivity" android:label="LinearLayout" />
+        <activity android:name=".RelativeActivity" android:label="RelativeLayout" />
+        <activity android:name=".FrameActivity" android:label="FrameLayout" />
+        <activity android:name=".TableActivity" android:label="TableLayout" />
+
+    </application>
+</manifest>
