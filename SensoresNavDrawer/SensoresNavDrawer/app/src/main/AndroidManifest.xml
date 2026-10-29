@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Solo el GPS necesita permisos. Acelerómetro, giroscopio y magnetómetro NO -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- required="false" = se instala aunque el teléfono no tenga ese sensor -->
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.gyroscope" android:required="false" />
+    <uses-feature android:name="android.hardware.sensor.compass" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SensoresApp"
+        tools:targetApi="31">
+
+        <!-- Primera pantalla: usa el tema del SPLASH -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SensoresApp.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Una Activity por sensor (vertical fija para que no cambien los ejes) -->
+        <activity android:name=".AcelerometroActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".GiroscopioActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".MagnetometroActivity" android:exported="false" android:screenOrientation="portrait" />
+        <activity android:name=".GpsActivity" android:exported="false" android:screenOrientation="portrait" />
+    </application>
+</manifest>

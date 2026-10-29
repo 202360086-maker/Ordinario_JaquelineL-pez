@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Opciones del menú lateral -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- single = solo una opción marcada a la vez -->
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_inicio" android:icon="@android:drawable/ic_menu_info_details" android:title="Inicio" />
+        <item android:id="@+id/nav_acelerometro" android:icon="@android:drawable/ic_menu_directions" android:title="Acelerómetro" />
+        <item android:id="@+id/nav_giroscopio" android:icon="@android:drawable/ic_menu_rotate" android:title="Giroscopio" />
+        <item android:id="@+id/nav_magnetometro" android:icon="@android:drawable/ic_menu_compass" android:title="Magnetómetro" />
+        <item android:id="@+id/nav_gps" android:icon="@android:drawable/ic_menu_mylocation" android:title="GPS" />
+    </group>
+</menu>

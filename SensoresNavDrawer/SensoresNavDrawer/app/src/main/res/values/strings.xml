@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SensoresApp</string>
+    <!-- Textos de accesibilidad del botón ☰ -->
+    <string name="abrir_menu">Abrir menú</string>
+    <string name="cerrar_menu">Cerrar menú</string>
+</resources>

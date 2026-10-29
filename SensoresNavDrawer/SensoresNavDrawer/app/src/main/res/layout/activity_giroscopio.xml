@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Demo del GIROSCOPIO -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView style="@style/TextoTitulo" android:text="Giroscopio" />
+                <TextView style="@style/TextoDescripcion" android:text="Velocidad de giro en cada eje. Si el teléfono está quieto, todo marca ≈ 0." />
+                <TextView android:id="@+id/tvX" style="@style/TextoValor" android:text="X: 0.00 rad/s" />
+                <TextView android:id="@+id/tvY" style="@style/TextoValor" android:text="Y: 0.00 rad/s" />
+                <TextView android:id="@+id/tvZ" style="@style/TextoValor" android:text="Z: 0.00 rad/s" />
+                <TextView android:id="@+id/tvMovimiento" style="@style/TextoValor" android:text="Quieto" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView style="@style/TextoTitulo" android:text="Rotación acumulada (eje Z)" />
+                <TextView style="@style/TextoDescripcion" android:text="Gira el teléfono acostado sobre la mesa." />
+                <ImageView
+                    android:id="@+id/imgGiro"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="Indicador de giro"
+                    android:src="@drawable/ic_brujula" />
+                <TextView android:id="@+id/tvAngulo" style="@style/TextoValor" android:text="Rotación: 0.0°" />
+                <Button
+                    android:id="@+id/btnReiniciar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Reiniciar a 0°" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Encabezado del menú lateral -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@color/card"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/ic_splash" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="serif"
+        android:text="Sensores"
+        android:textColor="@color/texto"
+        android:textSize="26sp" />
+
+    <TextView
+        style="@style/TextoEtiqueta"
+        android:layout_marginTop="2dp"
+        android:text="Panel en vivo"
+        android:textColor="@color/primario" />
+</LinearLayout>

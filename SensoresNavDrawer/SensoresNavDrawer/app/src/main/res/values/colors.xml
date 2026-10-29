@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- ===== PALETA BENTO OSCURO ===== -->
+    <color name="primario">#D4B483</color>        <!-- Dorado champaña -->
+    <color name="primario_oscuro">#B8955C</color>
+    <color name="acento">#D4B483</color>
+    <color name="fondo">#0E0E10</color>           <!-- Negro de fondo -->
+    <color name="card">#18181B</color>            <!-- Tarjetas -->
+    <color name="borde">#2A2722</color>           <!-- Borde fino -->
+    <color name="texto">#EDE8DE</color>           <!-- Texto crema -->
+    <color name="texto_suave">#7C7566</color>     <!-- Texto gris cálido -->
+    <color name="blanco">#EDE8DE</color>          <!-- Crema (botón ☰) -->
+    <color name="negro">#0E0E10</color>           <!-- Texto sobre dorado -->
+    <color name="gris_barra">#4A453C</color>      <!-- Barras inactivas -->
+    <color name="chip">#1F1E1B</color>
+    <color name="ic_launcher_background">#0E0E10</color>
+</resources>

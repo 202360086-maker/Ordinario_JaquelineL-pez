@@ -1,0 +1,90 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Tema base OSCURO de Material 3, sin ActionBar (usamos Toolbar propia) -->
+    <style name="Base.Theme.SensoresApp" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/primario</item>
+        <item name="colorOnPrimary">@color/negro</item>
+        <item name="colorSecondary">@color/primario</item>
+        <item name="colorSecondaryContainer">@color/borde</item>
+        <item name="colorOnSecondaryContainer">@color/primario</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/texto</item>
+        <item name="android:colorBackground">@color/fondo</item>
+    </style>
+
+    <style name="Theme.SensoresApp" parent="Base.Theme.SensoresApp" />
+
+    <!-- SPLASH: fondo negro con ícono dorado -->
+    <style name="Theme.SensoresApp.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/fondo</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.SensoresApp</item>
+    </style>
+
+    <!-- Título de la Toolbar con letra serif -->
+    <style name="ToolbarTitulo" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/texto</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <!-- ===== ESTILOS REUTILIZABLES ===== -->
+    <style name="TarjetaSensor" parent="Widget.Material3.CardView.Outlined">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">14dp</item>
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardBackgroundColor">@color/card</item>
+        <item name="strokeColor">@color/borde</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="contentPadding">18dp</item>
+    </style>
+
+    <style name="TextoEtiqueta">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:letterSpacing">0.15</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/texto_suave</item>
+    </style>
+
+    <style name="TextoGrande">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="TextoTitulo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/texto</item>
+    </style>
+
+    <style name="TextoDescripcion">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/texto_suave</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="TextoValor">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/primario</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:background">@drawable/fondo_valor</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+</resources>

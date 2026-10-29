@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Demo del ACELERÓMETRO -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView style="@style/TextoTitulo" android:text="Acelerómetro" />
+                <TextView style="@style/TextoDescripcion" android:text="Aceleración en cada eje (incluye la gravedad ≈ 9.81 m/s²)." />
+                <TextView android:id="@+id/tvX" style="@style/TextoValor" android:text="X: 0.00 m/s²" />
+                <TextView android:id="@+id/tvY" style="@style/TextoValor" android:text="Y: 0.00 m/s²" />
+                <TextView android:id="@+id/tvZ" style="@style/TextoValor" android:text="Z: 0.00 m/s²" />
+                <TextView android:id="@+id/tvMagnitud" style="@style/TextoValor" android:text="Total: 0.00 m/s²" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView style="@style/TextoTitulo" android:text="Nivel de burbuja" />
+                <TextView style="@style/TextoDescripcion" android:text="Inclina el teléfono y la bolita rodará hacia ese lado." />
+                <FrameLayout
+                    android:id="@+id/zona"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/fondo_zona">
+                    <View
+                        android:id="@+id/bola"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bola" />
+                </FrameLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView style="@style/TextoTitulo" android:text="Detector de agitación" />
+                <TextView android:id="@+id/tvEstado" style="@style/TextoValor" android:text="Agita el teléfono..." />
+                <TextView android:id="@+id/tvContador" style="@style/TextoValor" android:text="Agitaciones: 0" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

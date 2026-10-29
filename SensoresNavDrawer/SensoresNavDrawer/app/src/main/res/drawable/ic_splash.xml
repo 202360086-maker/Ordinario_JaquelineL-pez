@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brújula dorada para el splash y el menú -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path android:fillColor="#00000000" android:strokeColor="#D4B483" android:strokeWidth="2"
+        android:pathData="M30,54 a24,24 0 1,0 48,0 a24,24 0 1,0 -48,0" />
+    <path android:fillColor="#D4B483" android:pathData="M54,34 L59,54 L49,54 Z" />
+    <path android:fillColor="#4A453C" android:pathData="M54,74 L59,54 L49,54 Z" />
+    <path android:fillColor="#EDE8DE" android:pathData="M52,54 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+</vector>

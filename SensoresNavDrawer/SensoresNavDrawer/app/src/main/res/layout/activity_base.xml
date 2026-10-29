@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DrawerLayout: permite el menú lateral. Hijo 1 = contenido, Hijo 2 = menú -->
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="start">
+
+    <!-- HIJO 1: contenido -->
+    <LinearLayout
+        android:id="@+id/contenido_principal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fondo"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:titleTextAppearance="@style/ToolbarTitulo" />
+
+        <FrameLayout
+            android:id="@+id/area_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/fondo_contenido">
+
+            <!-- Aquí cada Activity mete su propio diseño -->
+            <FrameLayout
+                android:id="@+id/contenedor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false" />
+
+            <!-- Botón flotante "Regresar" -->
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btnRegresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="20dp"
+                android:text="Regresar"
+                android:textColor="@color/negro"
+                app:backgroundTint="@color/primario"
+                app:icon="@drawable/ic_flecha_atras"
+                app:iconTint="@color/negro" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- HIJO 2: menú lateral -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:itemIconTint="@color/primario"
+        app:itemTextColor="@color/texto"
+        app:menu="@menu/menu_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

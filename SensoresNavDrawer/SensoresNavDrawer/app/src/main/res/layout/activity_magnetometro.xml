@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Demo del MAGNETÓMETRO -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView style="@style/TextoTitulo" android:text="Magnetómetro" />
+                <TextView style="@style/TextoDescripcion" android:text="Campo magnético en microteslas (µT). El de la Tierra es de 25 a 65 µT." />
+                <TextView android:id="@+id/tvX" style="@style/TextoValor" android:text="X: 0.00 µT" />
+                <TextView android:id="@+id/tvY" style="@style/TextoValor" android:text="Y: 0.00 µT" />
+                <TextView android:id="@+id/tvZ" style="@style/TextoValor" android:text="Z: 0.00 µT" />
+                <TextView android:id="@+id/tvMagnitud" style="@style/TextoValor" android:text="Total: 0.00 µT" />
+                <TextView android:id="@+id/tvInterferencia" style="@style/TextoDescripcion" android:text="" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView style="@style/TarjetaSensor">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <TextView style="@style/TextoTitulo" android:text="Brújula" />
+                <TextView style="@style/TextoDescripcion" android:text="La aguja dorada apunta al norte magnético." />
+                <ImageView
+                    android:id="@+id/imgBrujula"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="Brújula"
+                    android:src="@drawable/ic_brujula" />
+                <TextView android:id="@+id/tvRumbo" style="@style/TextoValor" android:text="Rumbo: 0° Norte" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>
