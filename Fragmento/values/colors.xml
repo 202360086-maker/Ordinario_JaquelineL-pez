@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="fondo_app">#F4F6FB</color>
+    <color name="texto_titulo">#1F2A44</color>
+    <color name="texto_subtitulo">#6B7691</color>
+    <color name="frag1">#4F6DF5</color>
+    <color name="frag2">#12B886</color>
+    <color name="frag3">#F76707</color>
+</resources>
